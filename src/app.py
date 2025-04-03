@@ -54,7 +54,8 @@ def index():
 
             # Display recommendations
             st.subheader("Recommended Movies:")
-            st.write("\n".join(recommendations))
+            for movie in recommendations:
+                st.write(f"- {movie}")
     else:
         error = "Movie not found. Please try another title."
 
@@ -64,4 +65,4 @@ def index():
 # Call the function
 index()
 
-# Streamlit link: https://dansah2-streamlitwebapp-machine-learning.onrender.com
+# Render link: https://dansah2-streamlitwebapp-machine-learning.onrender.com
